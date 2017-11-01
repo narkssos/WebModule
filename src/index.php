@@ -18,7 +18,15 @@ class Context {
 }
 
 interface IComponent{
-    function render();
+    function render(Context $context);
 }
 
+
+class TestComponent implements IComponent{
+
+    function render(Context $context)
+    {
+       return "<div>simple</div>";
+    }
+}
 ?>
