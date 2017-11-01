@@ -1,5 +1,5 @@
 {
-    "name": "WebModule/common",
+    "name": "web-module/common",
     "require": {
         "php": ">=5.6"
     },
