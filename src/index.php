@@ -2,18 +2,27 @@
 namespace WebModule;
 
 class Context {
+    private $domain;
     private $siteID;
     private $pageID;
-    public function __construct($siteID, $pageID) {
+    private $pageName;
+    public function __construct($domain, $siteID, $pageID, $pageName) {
+        $this->domain = $domain;
         $this->siteID = $siteID;
         $this->pageID = $pageID;
+        $this->pageName = $pageName;
     }
-
+    public function domain() {
+        return $this->domain;
+    }
     public function siteID() {
         return $this->siteID;
     }
     public function pageID() {
         return $this->pageID;
+    }
+    public function pageName() {
+        return $this->pageName;
     }
 }
 
