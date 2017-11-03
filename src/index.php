@@ -12,17 +12,17 @@ class Context {
         $this->pageID = $pageID;
         $this->pageName = $pageName;
     }
-    public function domain() {
-        return $this->domain;
+    public function __get($key)
+    {
+        if (property_exists($this, $key)) {
+            return $this->{$key};
+        } else {
+            return null; // or throw an exception
+        }
     }
-    public function siteID() {
-        return $this->siteID;
-    }
-    public function pageID() {
-        return $this->pageID;
-    }
-    public function pageName() {
-        return $this->pageName;
+    public function __set($key, $value)
+    {
+        return; // or throw an exception
     }
 }
 
