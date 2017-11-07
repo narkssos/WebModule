@@ -6,11 +6,13 @@ class Context {
     private $siteID;
     private $pageID;
     private $pageName;
-    public function __construct($domain, $siteID, $pageID, $pageName) {
+    private $mode;
+    public function __construct($domain, $siteID, $pageID, $pageName,$mode="staging") {
         $this->domain = $domain;
         $this->siteID = $siteID;
         $this->pageID = $pageID;
         $this->pageName = $pageName;
+        $this->mode = $mode;
     }
     public function __get($key)
     {
